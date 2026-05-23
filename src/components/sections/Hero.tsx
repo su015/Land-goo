@@ -7,6 +7,8 @@ import TextReveal from "@/components/ui/TextReveal";
 import Button from "@/components/ui/Button";
 import { useScroll } from "framer-motion";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const bgRef = useRef<HTMLDivElement>(null);
@@ -20,21 +22,7 @@ export default function Hero() {
   useEffect(() => {
     if (!containerRef.current || !bgRef.current || !contentRef.current) return;
     
-    // Parallax effect on scroll
-    gsap.fromTo(
-      bgRef.current,
-      { yPercent: 0 },
-      {
-        yPercent: 30,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      }
-    );
+    // Parallax effect on scroll removed for background video to prevent gaps
 
     gsap.fromTo(
       contentRef.current,
@@ -59,24 +47,33 @@ export default function Hero() {
       ref={containerRef}
       className="relative flex h-screen min-h-[800px] w-full items-center justify-center overflow-hidden px-6 md:px-16"
     >
-      {/* Background Cinematic Lighting */}
+      {/* Background Video */}
       <div
         ref={bgRef}
-        className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none overflow-visible"
+        className="absolute inset-0 z-0 pointer-events-none"
       >
-        <div className="absolute top-1/4 left-1/4 h-[40vh] w-[40vw] rounded-full bg-[var(--color-accent-blue)] opacity-20 blur-[120px] mix-blend-screen" />
-        <div className="absolute bottom-1/4 right-1/4 h-[50vh] w-[30vw] rounded-full bg-[var(--color-accent-cyan)] opacity-10 blur-[150px] mix-blend-screen" />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        >
+          <source src="/home.mp4" type="video/mp4" />
+        </video>
+        {/* Dark overlay to ensure text is readable */}
+        <div className="absolute inset-0 bg-black/40 z-[1]"></div>
       </div>
 
       <div ref={contentRef} className="relative z-10 flex flex-col items-center text-center">
-        <p className="mb-6 font-mono text-sm tracking-[0.3em] text-[var(--color-accent-cyan)] uppercase opacity-80">
+        <p className="mb-6 font-mono text-sm tracking-[0.3em] text-white uppercase opacity-80">
           Welcome to the future
         </p>
         
         <TextReveal
           text="AIRBORN"
           randomLetters={true}
-          className="text-center text-6xl font-[family-name:var(--font-archivo)] uppercase leading-tight sm:text-8xl md:text-9xl lg:text-[150px] mb-6 text-white"
+          className="text-center text-6xl font-[family-name:var(--font-space-grotesk)] uppercase leading-tight sm:text-8xl md:text-9xl lg:text-[150px] mb-6 text-white"
         />
 
         <p className="mb-12 max-w-2xl text-lg text-[#A0A0A0] sm:text-xl font-light">

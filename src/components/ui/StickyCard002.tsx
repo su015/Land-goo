@@ -44,14 +44,14 @@ export const StickyCard002 = ({
 
       gsap.set(imageElements[0], { y: "0%", scale: 1, rotation: 0 });
       if (textElements[0]) {
-        gsap.set(textElements[0].querySelectorAll('h2, p'), { opacity: 1, y: 0, filter: "blur(0px)" });
+        gsap.set(textElements[0]!.querySelectorAll('h2, p'), { opacity: 1, y: 0, filter: "blur(0px)" });
       }
 
       for (let i = 1; i < totalCards; i++) {
         if (!imageElements[i]) continue;
         gsap.set(imageElements[i], { y: "100%", scale: 1, rotation: 0 });
         if (textElements[i]) {
-          gsap.set(textElements[i].querySelectorAll('h2, p'), { opacity: 0, y: 50, filter: "blur(10px)" });
+          gsap.set(textElements[i]!.querySelectorAll('h2, p'), { opacity: 0, y: 50, filter: "blur(10px)" });
         }
       }
 

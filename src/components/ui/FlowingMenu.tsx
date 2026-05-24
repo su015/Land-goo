@@ -7,7 +7,6 @@ interface MenuItemData {
   link: string;
   text: string;
   image: string;
-  image: string;
   video?: string;
   youtubeId?: string;
   details?: string;
@@ -30,7 +29,6 @@ interface MenuItemProps extends MenuItemData {
   marqueeTextColor: string;
   borderColor: string;
   isFirst: boolean;
-  onHover: (item: MenuItemData) => void;
   onHover: (item: MenuItemData) => void;
   onLeave: () => void;
   onClick: (item: MenuItemData) => void;

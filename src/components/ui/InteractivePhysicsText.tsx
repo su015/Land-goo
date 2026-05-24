@@ -173,7 +173,7 @@ function DraggableLetter({
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
         animate={
-          isCollapsed
+          (isCollapsed
             ? {
               opacity: 1,
               color: isComplete ? "#F5F5F5" : "rgba(245, 245, 245, 0)",
@@ -197,7 +197,7 @@ function DraggableLetter({
               color: "#F5F5F5",
               WebkitTextStroke: "0px rgba(245,245,245,0)",
               filter: "drop-shadow(0px 0px 0px rgba(255,255,255,0))",
-            }
+            }) as any
         }
         initial={{ opacity: 0, filter: "blur(10px)" }}
         transition={
@@ -224,9 +224,9 @@ function DraggableLetter({
           cursor: "grabbing",
           WebkitTextStroke: "2px rgba(0, 194, 255, 1)",
           filter: "drop-shadow(0px 0px 0px rgba(0, 194, 255, 0))",
-        }}
+        } as any}
         whileHover={
-          isCollapsed && !isSnapped
+          (isCollapsed && !isSnapped
             ? {
               scale: 1.05,
               cursor: "grab",
@@ -237,7 +237,7 @@ function DraggableLetter({
                 scale: 1.05,
                 cursor: "pointer",
               }
-              : {}
+              : {}) as any
         }
         onPointerDown={() => {
           if (!isCollapsed) onDrop();

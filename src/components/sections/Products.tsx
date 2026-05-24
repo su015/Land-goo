@@ -44,50 +44,50 @@ export default function Products() {
     <section
       id="products"
       ref={containerRef}
-      className="relative w-full min-h-screen flex flex-col justify-center py-32 px-6 md:px-16 bg-[#050505] overflow-hidden"
+      className="relative w-full flex flex-col justify-center py-[120px] px-6 md:px-16 overflow-hidden"
     >
-      <div className="products-header mb-20 text-center">
-        <h2 className="text-4xl font-bold uppercase tracking-widest sm:text-5xl font-[family-name:var(--font-heading)] mb-4">
-          Our <span className="text-gradient-accent">Products</span>
+      <div className="products-header mb-20 text-center max-w-[1400px] mx-auto w-full">
+        <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-[-0.04em] leading-[0.9] text-[#F5F5F5] font-[family-name:var(--font-heading)] mb-6">
+          Our <span className="text-[#00C2FF]">Products</span>
         </h2>
-        <p className="text-[#A0A0A0] max-w-2xl mx-auto font-light">
+        <p className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]">
           Explore our premium suite of tools and assets, beautifully organized for your convenience.
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-24 max-w-7xl mx-auto mt-10">
-        <div className="product-folder flex flex-col items-center group">
+      <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-24 max-w-[1400px] mx-auto w-full mt-10">
+        <div className="product-folder flex flex-col items-center group cursor-pointer">
           <div style={{ height: '250px', width: '250px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Folder size={2.5} color="#00D9FF" />
+            <Folder size={2.5} color="#00C2FF" />
           </div>
-          <h3 className="mt-8 text-xl font-bold uppercase tracking-wider text-[#F5F5F5] font-[family-name:var(--font-heading)] transition-colors group-hover:text-[#00D9FF]">
+          <h3 className="mt-8 text-2xl font-bold tracking-[-0.02em] text-[#F5F5F5] font-[family-name:var(--font-heading)] transition-colors group-hover:text-[#00C2FF]">
             Design Assets
           </h3>
-          <p className="text-[#A0A0A0] text-sm mt-2 text-center max-w-[200px]">
+          <p className="text-[#A1A1AA] text-[16px] mt-2 text-center max-w-[250px] leading-[1.8]">
             High quality UI kits and components.
           </p>
         </div>
 
-        <div className="product-folder flex flex-col items-center group">
+        <div className="product-folder flex flex-col items-center group cursor-pointer">
           <div style={{ height: '250px', width: '250px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Folder size={2.5} color="#00D9FF" />
+            <Folder size={2.5} color="#00C2FF" />
           </div>
-          <h3 className="mt-8 text-xl font-bold uppercase tracking-wider text-[#F5F5F5] font-[family-name:var(--font-heading)] transition-colors group-hover:text-[#00D9FF]">
+          <h3 className="mt-8 text-2xl font-bold tracking-[-0.02em] text-[#F5F5F5] font-[family-name:var(--font-heading)] transition-colors group-hover:text-[#00C2FF]">
             Source Codes
           </h3>
-          <p className="text-[#A0A0A0] text-sm mt-2 text-center max-w-[200px]">
+          <p className="text-[#A1A1AA] text-[16px] mt-2 text-center max-w-[250px] leading-[1.8]">
             Production ready boilerplates.
           </p>
         </div>
 
-        <div className="product-folder flex flex-col items-center group">
+        <div className="product-folder flex flex-col items-center group cursor-pointer">
           <div style={{ height: '250px', width: '250px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Folder size={2.5} color="#00D9FF" />
+            <Folder size={2.5} color="#00C2FF" />
           </div>
-          <h3 className="mt-8 text-xl font-bold uppercase tracking-wider text-[#F5F5F5] font-[family-name:var(--font-heading)] transition-colors group-hover:text-[#00D9FF]">
+          <h3 className="mt-8 text-2xl font-bold tracking-[-0.02em] text-[#F5F5F5] font-[family-name:var(--font-heading)] transition-colors group-hover:text-[#00C2FF]">
             Templates
           </h3>
-          <p className="text-[#A0A0A0] text-sm mt-2 text-center max-w-[200px]">
+          <p className="text-[#A1A1AA] text-[16px] mt-2 text-center max-w-[250px] leading-[1.8]">
             Premium website templates.
           </p>
         </div>

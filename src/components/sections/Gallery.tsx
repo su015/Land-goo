@@ -73,20 +73,22 @@ export default function Gallery() {
   }, []);
 
   return (
-    <section id="gallery" ref={sectionRef} className="relative w-full py-32 bg-[#050505]">
-      <div ref={textRef} className="text-center mb-16 px-6">
-        <h2 className="text-4xl font-bold uppercase tracking-widest sm:text-5xl font-[family-name:var(--font-heading)] mb-4 text-[#F5F5F5]">
-          Interactive <span className="text-[var(--color-accent-blue)]">Gallery</span>
+    <section id="gallery" ref={sectionRef} className="relative w-full py-[120px] overflow-hidden">
+      <div ref={textRef} className="text-center mb-16 px-6 max-w-[1400px] mx-auto w-full">
+        <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-[-0.04em] leading-[0.9] text-[#F5F5F5] font-[family-name:var(--font-heading)] mb-6">
+          Interactive <span className="text-[#00C2FF]">Gallery</span>
         </h2>
-        <p className="text-[#A0A0A0] max-w-2xl mx-auto font-light">
+        <p className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]">
           Drag around to explore our 3D visual archive.
         </p>
       </div>
 
-      <div ref={canvasRef} className="relative w-full h-[600px] md:h-[800px] overflow-hidden">
+      <div ref={canvasRef} className="relative w-full h-[600px] md:h-[800px] overflow-hidden max-w-[1400px] mx-auto rounded-3xl border border-[#1F1F1F] bg-[#111111]/50 backdrop-blur-sm">
         {/* Subtle gradient overlays to blend the 3D canvas with the background */}
-        <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-[#050505] to-transparent z-10 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#050505] to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#0A0A0A]/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0A0A0A]/80 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#0A0A0A]/80 to-transparent z-10 pointer-events-none hidden md:block" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#0A0A0A]/80 to-transparent z-10 pointer-events-none hidden md:block" />
         
         {/* @ts-expect-error - InfiniteMenu is JSX and infers never[] for items */}
         <InfiniteMenu items={galleryItems} scale={1.0} />

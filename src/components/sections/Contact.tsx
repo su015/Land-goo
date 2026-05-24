@@ -18,7 +18,7 @@ export default function Contact() {
   });
 
   return (
-    <section ref={sectionRef} id="contact" className="relative w-full py-32 px-6 md:px-16 bg-[#050505] overflow-hidden">
+    <section ref={sectionRef} id="contact" className="relative w-full min-h-screen flex flex-col justify-center py-32 px-6 md:px-16 bg-[#050505] overflow-hidden">
       {/* Background Interactive Ballpit */}
       <div className="absolute inset-0 z-0 opacity-60 overflow-hidden pointer-events-auto">
         <Ballpit 

@@ -4,38 +4,62 @@ import { motion } from "framer-motion";
 import FlowingMenu from "@/components/ui/FlowingMenu";
 
 const demoItems = [
-  { link: '#', text: 'Mojave', image: 'https://picsum.photos/600/400?random=1' },
-  { link: '#', text: 'Sonoma', image: 'https://picsum.photos/600/400?random=2' },
-  { link: '#', text: 'Monterey', image: 'https://picsum.photos/600/400?random=3' },
-  { link: '#', text: 'Sequoia', image: 'https://picsum.photos/600/400?random=4' }
+  { 
+    link: '#', 
+    text: 'Mojave', 
+    image: 'https://picsum.photos/400/200?random=1',
+    youtubeId: 'wu4NYMmk8pk',
+    details: 'A desolate yet beautiful landscape where minimalist design meets raw natural beauty.'
+  },
+  { 
+    link: '#', 
+    text: 'Sonoma', 
+    image: 'https://picsum.photos/400/200?random=2',
+    youtubeId: 'DE0fg1yT6ig',
+    details: 'Rolling hills and cinematic lighting that inspire flowing animations.'
+  },
+  { 
+    link: '#', 
+    text: 'Monterey', 
+    image: 'https://picsum.photos/400/200?random=3',
+    youtubeId: 'uDM3Hy8Sfmw',
+    details: 'Deep ocean currents translated into fluid user interface transitions.'
+  },
+  { 
+    link: '#', 
+    text: 'Sequoia', 
+    image: 'https://picsum.photos/400/200?random=4',
+    youtubeId: '4D0o8exrcAk',
+    details: 'Towering ambition and structural integrity forming the backbone of digital spaces.'
+  }
 ];
 
 export default function WhyLund() {
   return (
-    <section className="w-full bg-[#050505] text-[#F5F5F5] relative z-10 py-24 overflow-hidden border-t border-[var(--color-border-soft)]">
+    <section className="w-full relative z-10 py-[120px] overflow-hidden border-t border-[var(--color-border-soft)]">
       <motion.div 
-        className="text-center mb-16 px-6 relative z-20"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-center mb-16 px-6 relative z-20 max-w-[1400px] mx-auto w-full"
+        initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h2 className="text-4xl font-bold uppercase tracking-widest sm:text-5xl font-[family-name:var(--font-heading)] mb-4 text-[#F5F5F5]">
-          Why <span className="text-[var(--color-accent-blue)]">LAnd</span>
+        <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-[-0.04em] leading-[0.9] text-[#F5F5F5] font-[family-name:var(--font-heading)] mb-6">
+          Why <span className="text-[#00C2FF]">LAnd</span>
         </h2>
-        <p className="text-[#A0A0A0] max-w-2xl mx-auto font-light leading-relaxed">
+        <p className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]">
           We believe in the perfect synergy of motion, design, and technology. Every interaction is crafted to leave a lasting impression, transforming ordinary web navigation into an immersive journey.
         </p>
       </motion.div>
 
-      <div style={{ height: '600px', position: 'relative' }}>
+      <div style={{ height: '600px', position: 'relative' }} className="w-full">
         <FlowingMenu 
           items={demoItems} 
-          bgColor="#050505"
+          bgColor="#0A0A0A"
           textColor="#F5F5F5"
-          borderColor="rgba(255,255,255,0.1)"
-          marqueeBgColor="#00D9FF"
-          marqueeTextColor="#050505"
+          borderColor="#1F1F1F"
+          marqueeBgColor="#00C2FF"
+          marqueeTextColor="#0A0A0A"
         />
       </div>
     </section>

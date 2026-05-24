@@ -12,9 +12,9 @@ const techLogos = [
 
 export default function PartnerLogos() {
   return (
-    <section className="relative w-full bg-[#050505] py-12 overflow-hidden z-10 border-b border-[var(--color-border-soft)]">
-      <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
-        <p className="font-mono text-xs tracking-[0.2em] text-[#A0A0A0] uppercase">Powered By Next-Gen Tech</p>
+    <section className="relative w-full py-[60px] overflow-hidden z-10 border-b border-[var(--color-border-soft)]">
+      <div className="max-w-[1400px] mx-auto px-6 mb-8 text-center">
+        <p className="font-mono text-xs tracking-[0.2em] text-[#A1A1AA] uppercase">Powered By Next-Gen Tech</p>
       </div>
       <div style={{ height: '80px', position: 'relative' }}>
         <LogoLoop
@@ -26,7 +26,7 @@ export default function PartnerLogos() {
           hoverSpeed={10}
           scaleOnHover
           fadeOut
-          fadeOutColor="#050505"
+          fadeOutColor="#0A0A0A"
           ariaLabel="Technology stack logos"
         />
       </div>

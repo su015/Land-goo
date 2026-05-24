@@ -60,24 +60,24 @@ const Skiper30 = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#050505] text-[#F5F5F5] relative z-10 py-16 overflow-hidden">
+    <section className="w-full relative z-10 py-[120px] overflow-hidden">
       <motion.div 
-        className="text-center mb-16 px-6 relative z-20 mt-10"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-center mb-16 px-6 relative z-20 max-w-[1400px] mx-auto w-full"
+        initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h2 className="text-4xl font-bold uppercase tracking-widest sm:text-5xl font-[family-name:var(--font-heading)] mb-4 text-[#F5F5F5]">
-          MAngo <span className="text-[var(--color-accent-blue)]">Post</span>
+        <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-[-0.04em] leading-[0.9] text-[#F5F5F5] font-[family-name:var(--font-heading)] mb-6">
+          MAngo <span className="text-[#00C2FF]">Post</span>
         </h2>
-        <p className="text-[#A0A0A0] max-w-2xl mx-auto font-light leading-relaxed">
+        <p className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]">
           A vibrant collection of moments captured in time, blending the warmth of a sun-soaked afternoon with the crisp, refreshing reality of modern digital art. Dive deep into a sea of creative perspectives and dynamic visual stories.
         </p>
       </motion.div>
       <div
         ref={gallery}
-        className="relative box-border flex h-[150vh] gap-[2vw] overflow-hidden bg-[#050505] px-[2vw]"
+        className="relative box-border flex h-[150vh] gap-[2vw] overflow-hidden max-w-[1400px] mx-auto px-[2vw] rounded-3xl"
       >
         <Column images={[images[0], images[1], images[2]]} y={y} />
         <Column images={[images[3], images[4], images[5]]} y={y2} />

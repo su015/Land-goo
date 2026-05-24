@@ -170,33 +170,30 @@ export const createAnimation = (
       name: `${variant}-${start}${blur ? "-blur" : ""}`,
       css: `
       ::view-transition-group(root) {
-        animation-duration: 2.5s;
-        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-        background-color: rgba(0, 210, 255, 0.15);
+        animation-duration: 1.5s;
+        animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+        background-color: rgba(255, 255, 255, 0.05);
       }
       ::view-transition-new(root) {
         animation-name: reveal-new${blur ? "-blur" : ""};
       }
       ::view-transition-old(root) {
-        animation: fade-old 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        animation: fade-old 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
         z-index: -1;
       }
       @keyframes fade-old {
         0% { opacity: 1; filter: blur(0px); }
-        30% { opacity: 0.5; filter: blur(16px) brightness(1.2); }
-        100% { opacity: 0; filter: blur(24px) brightness(1.5); }
+        50% { opacity: 0.5; filter: blur(2px); }
+        100% { opacity: 0; filter: blur(4px); }
       }
       @keyframes reveal-new${blur ? "-blur" : ""} {
         0% {
           clip-path: circle(0% at 50% 50%);
-          ${blur ? "filter: drop-shadow(0 0 30px rgba(0, 210, 255, 0.8)) blur(12px);" : ""}
-        }
-        30% {
-          ${blur ? "filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.4)) blur(0px);" : ""}
+          ${blur ? "filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) blur(2px);" : ""}
         }
         100% {
           clip-path: circle(150% at 50% 50%);
-          ${blur ? "filter: drop-shadow(0 0 0px rgba(0, 210, 255, 0)) blur(0px);" : ""}
+          ${blur ? "filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0)) blur(0px);" : ""}
         }
       }
       `,
@@ -220,33 +217,30 @@ export const createAnimation = (
       name: `${variant}-${start}${blur ? "-blur" : ""}`,
       css: `
       ::view-transition-group(root) {
-        animation-duration: 2.5s;
-        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-        background-color: rgba(0, 210, 255, 0.15);
+        animation-duration: 1.5s;
+        animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+        background-color: rgba(255, 255, 255, 0.05);
       }
       ::view-transition-new(root) {
         animation-name: reveal-new-${start}${blur ? "-blur" : ""};
       }
       ::view-transition-old(root) {
-        animation: fade-old 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        animation: fade-old 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
         z-index: -1;
       }
       @keyframes fade-old {
         0% { opacity: 1; filter: blur(0px); }
-        30% { opacity: 0.5; filter: blur(16px) brightness(1.2); }
-        100% { opacity: 0; filter: blur(24px) brightness(1.5); }
+        50% { opacity: 0.5; filter: blur(2px); }
+        100% { opacity: 0; filter: blur(4px); }
       }
       @keyframes reveal-new-${start}${blur ? "-blur" : ""} {
         0% {
           clip-path: circle(0% at ${clipPosition});
-          ${blur ? "filter: drop-shadow(0 0 30px rgba(0, 210, 255, 0.8)) blur(12px);" : ""}
-        }
-        30% {
-          ${blur ? "filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.4)) blur(0px);" : ""}
+          ${blur ? "filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) blur(2px);" : ""}
         }
         100% {
           clip-path: circle(150% at ${clipPosition});
-          ${blur ? "filter: drop-shadow(0 0 0px rgba(0, 210, 255, 0)) blur(0px);" : ""}
+          ${blur ? "filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0)) blur(0px);" : ""}
         }
       }
       `,
@@ -258,37 +252,34 @@ export const createAnimation = (
     name: `${variant}-${start}${blur ? "-blur" : ""}`,
     css: `
       ::view-transition-group(root) {
-        animation-duration: 2.5s;
-        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
-        background-color: rgba(0, 210, 255, 0.15);
+        animation-duration: 1.5s;
+        animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+        background-color: rgba(255, 255, 255, 0.05);
       }
       ::view-transition-new(root) {
         mask: url('${svg}') ${start.replace("-", " ")} / 0 no-repeat;
         mask-origin: content-box;
-        animation: scale-${start}${blur ? "-blur" : ""} 2.5s cubic-bezier(0.25, 1, 0.5, 1);
+        animation: scale-${start}${blur ? "-blur" : ""} 1.5s cubic-bezier(0.65, 0, 0.35, 1);
         transform-origin: ${transformOrigin};
       }
       ::view-transition-old(root) {
-        animation: fade-old 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        animation: fade-old 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
         transform-origin: ${transformOrigin};
         z-index: -1;
       }
       @keyframes fade-old {
         0% { opacity: 1; filter: blur(0px); }
-        30% { opacity: 0.5; filter: blur(16px) brightness(1.2); }
-        100% { opacity: 0; filter: blur(24px) brightness(1.5); }
+        50% { opacity: 0.5; filter: blur(2px); }
+        100% { opacity: 0; filter: blur(4px); }
       }
       @keyframes scale-${start}${blur ? "-blur" : ""} {
         0% {
           mask-size: 0vmax;
-          ${blur ? "filter: drop-shadow(0 0 30px rgba(0, 210, 255, 0.8)) blur(12px);" : ""}
-        }
-        30% {
-          ${blur ? "filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.4)) blur(0px);" : ""}
+          ${blur ? "filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) blur(2px);" : ""}
         }
         100% {
           mask-size: 2000vmax;
-          ${blur ? "filter: drop-shadow(0 0 0px rgba(0, 210, 255, 0)) blur(0px);" : ""}
+          ${blur ? "filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0)) blur(0px);" : ""}
         }
       }
     `,

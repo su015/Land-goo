@@ -75,11 +75,17 @@ export default function Gallery() {
   return (
     <section id="gallery" ref={sectionRef} className="relative w-full py-[120px] overflow-hidden">
       <div ref={textRef} className="text-center mb-16 px-6 max-w-[1400px] mx-auto w-full">
-        <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-[-0.04em] leading-[0.9] text-[#F5F5F5] font-[family-name:var(--font-heading)] mb-6">
-          Interactive <span className="text-[#00C2FF]">Gallery</span>
+        <h2 
+          className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-normal leading-[0.9] text-[#F5F5F5] mb-6 uppercase"
+          style={{ fontFamily: "var(--font-winter-tosca)" }}
+        >
+          INTERACTIVE GALLERY
         </h2>
-        <p className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]">
-          Drag around to explore our 3D visual archive.
+        <p 
+          className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]"
+          style={{ fontFamily: "var(--font-bolds-pixels)" }}
+        >
+          Drag around to <span className="text-[#FF4A3D]">explore</span> our 3D <span className="text-[#FF4A3D]">visual archive</span>.
         </p>
       </div>
 

@@ -60,7 +60,10 @@ export default function Navbar() {
         ref={navRef}
         className="fixed top-0 left-0 w-full z-50 py-6 px-8 md:px-16 flex justify-between items-center transition-colors duration-500 glass-panel border-x-0 border-t-0 border-b border-[var(--color-border-soft)]"
       >
-        <div className="text-2xl font-bold uppercase tracking-widest text-[#F5F5F5] font-[family-name:var(--font-heading)]">
+        <div 
+          className="text-2xl font-bold uppercase tracking-widest text-[#F5F5F5]"
+          style={{ fontFamily: "var(--font-super-hockey)" }}
+        >
           LAnd.
         </div>
 
@@ -69,7 +72,7 @@ export default function Navbar() {
           {links.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={link === "Products" ? "/products" : `#${link.toLowerCase()}`}
               className="text-sm font-medium tracking-wider uppercase text-[#A0A0A0] hover:text-[#F5F5F5] transition-colors duration-300 relative group"
             >
               {link}
@@ -97,7 +100,7 @@ export default function Navbar() {
           {links.map((link) => (
             <a
               key={link}
-              href={`#${link.toLowerCase()}`}
+              href={link === "Products" ? "/products" : `#${link.toLowerCase()}`}
               className="mobile-link text-4xl font-[family-name:var(--font-heading)] uppercase tracking-widest text-[#F5F5F5]"
               onClick={() => setIsOpen(false)}
             >

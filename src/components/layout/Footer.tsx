@@ -10,7 +10,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-16">
         {/* Brand Section */}
         <div className="flex flex-col gap-6 lg:w-5/12">
-          <h2 className="text-6xl font-bold font-[family-name:var(--font-heading)] text-[#F5F5F5] uppercase tracking-widest">
+          <h2 
+            className="text-6xl font-bold text-[#F5F5F5] uppercase tracking-widest"
+            style={{ fontFamily: "var(--font-super-hockey)" }}
+          >
             LAnd<span className="text-[var(--color-accent-cyan)]">.</span>
           </h2>
           <p className="text-[#A0A0A0] text-lg font-light leading-relaxed max-w-md">
@@ -28,7 +31,7 @@ export default function Footer() {
             <h3 className="text-[#F5F5F5] font-bold uppercase tracking-widest text-base mb-2 font-mono">Navigation</h3>
             <Link href="/" className="text-[#A0A0A0] hover:text-[var(--color-accent-blue)] transition-colors text-base font-light w-fit">Home</Link>
             <Link href="/about" className="text-[#A0A0A0] hover:text-[var(--color-accent-blue)] transition-colors text-base font-light w-fit">About</Link>
-            <Link href="/#products" className="text-[#A0A0A0] hover:text-[var(--color-accent-blue)] transition-colors text-base font-light w-fit">Products</Link>
+            <Link href="/products" className="text-[#A0A0A0] hover:text-[var(--color-accent-blue)] transition-colors text-base font-light w-fit">Products</Link>
             <Link href="/#gallery" className="text-[#A0A0A0] hover:text-[var(--color-accent-blue)] transition-colors text-base font-light w-fit">Gallery</Link>
             <Link href="/contact" className="text-[#A0A0A0] hover:text-[var(--color-accent-blue)] transition-colors text-base font-light w-fit">Contact</Link>
           </div>

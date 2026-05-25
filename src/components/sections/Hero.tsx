@@ -7,7 +7,6 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import InteractivePhysicsText from "@/components/ui/InteractivePhysicsText";
 import Button from "@/components/ui/Button";
 import GridMotion from "@/components/ui/GridMotion";
-
 const gridItems = Array.from({ length: 28 }, () => "");
 
 gsap.registerPlugin(ScrollTrigger);
@@ -56,19 +55,19 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 flex flex-col items-center text-center">
-        <p ref={topTextRef} className="mb-6 font-mono text-sm tracking-[0.3em] text-[#00C2FF] uppercase opacity-80">
-          Welcome to the future
-        </p>
         
         <InteractivePhysicsText
           text="AIRBORN"
           containerRef={containerRef}
-          className="text-center font-[family-name:var(--font-syncopate)] font-bold tracking-[-0.04em] uppercase leading-[0.9] text-[clamp(4rem,10vw,10rem)] mb-6 drop-shadow-[0_0_15px_rgba(245,245,245,0.1)]"
+          className="text-center font-[family-name:var(--font-super-hockey)] font-bold tracking-[0.1em] uppercase leading-[0.9] text-[clamp(4rem,10vw,10rem)] mb-6 drop-shadow-[0_0_15px_rgba(245,245,245,0.1)]"
         />
 
         <div ref={bottomContentRef} className="flex flex-col items-center">
-          <p className="mb-12 max-w-[700px] text-[16px] md:text-[18px] text-[#A1A1AA] leading-[1.8] font-light">
-            Crafting premium, cinematic web interfaces that transcend the ordinary. A blend of minimalism and cutting-edge motion design.
+          <p 
+            className="mb-12 max-w-[700px] text-[16px] md:text-[18px] text-[#A1A1AA] leading-[1.8] font-light"
+            style={{ fontFamily: "var(--font-bolds-pixels)" }}
+          >
+            Crafting <span className="text-[#FF4A3D]">premium</span>, cinematic web interfaces that <span className="text-[#FF4A3D]">transcend</span> the ordinary. A blend of <span className="text-[#FF4A3D]">minimalism</span> and cutting-edge <span className="text-[#FF4A3D]">motion design</span>.
           </p>
 
           <Button className="mt-4">

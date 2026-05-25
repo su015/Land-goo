@@ -46,7 +46,7 @@ export default function DockNavigation() {
   const items = [
     { icon: <Home size={20} />, label: 'Home', onClick: handleHomeClick },
     { icon: <User size={20} />, label: 'About', onClick: () => handleRoute('/about') },
-    { icon: <Briefcase size={20} />, label: 'Products', onClick: () => handleScrollTo('products') },
+    { icon: <Briefcase size={20} />, label: 'Products', onClick: () => handleRoute('/products') },
     { icon: <Camera size={20} />, label: 'Gallery', onClick: () => handleScrollTo('gallery') },
     { icon: <Mail size={20} />, label: 'Contact', onClick: () => handleRoute('/contact') },
   ];

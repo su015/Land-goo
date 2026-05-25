@@ -47,11 +47,17 @@ export default function Products() {
       className="relative w-full flex flex-col justify-center py-[120px] px-6 md:px-16 overflow-hidden"
     >
       <div className="products-header mb-20 text-center max-w-[1400px] mx-auto w-full">
-        <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-[-0.04em] leading-[0.9] text-[#F5F5F5] font-[family-name:var(--font-heading)] mb-6">
-          Our <span className="text-[#00C2FF]">Products</span>
+        <h2 
+          className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-normal leading-[0.9] text-[#F5F5F5] mb-6 uppercase"
+          style={{ fontFamily: "var(--font-winter-tosca)" }}
+        >
+          OUR PRODUCTS
         </h2>
-        <p className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]">
-          Explore our premium suite of tools and assets, beautifully organized for your convenience.
+        <p 
+          className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]"
+          style={{ fontFamily: "var(--font-bolds-pixels)" }}
+        >
+          Explore our <span className="text-[#FF4A3D]">premium suite</span> of tools and assets, <span className="text-[#FF4A3D]">beautifully organized</span> for your convenience.
         </p>
       </div>
 

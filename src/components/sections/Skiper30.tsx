@@ -62,22 +62,28 @@ const Skiper30 = () => {
   return (
     <section className="w-full relative z-10 py-[120px] overflow-hidden">
       <motion.div 
-        className="text-center mb-16 px-6 relative z-20 max-w-[1400px] mx-auto w-full"
+        className="text-left mb-16 px-6 md:px-12 lg:px-24 relative z-20 w-full"
         initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-[-0.04em] leading-[0.9] text-[#F5F5F5] font-[family-name:var(--font-heading)] mb-6">
-          MAngo <span className="text-[#00C2FF]">Post</span>
+        <h2 
+          className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-normal leading-[0.9] text-[#F5F5F5] mb-6 uppercase"
+          style={{ fontFamily: "var(--font-winter-tosca)" }}
+        >
+          MANGO POST
         </h2>
-        <p className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]">
-          A vibrant collection of moments captured in time, blending the warmth of a sun-soaked afternoon with the crisp, refreshing reality of modern digital art. Dive deep into a sea of creative perspectives and dynamic visual stories.
+        <p 
+          className="text-[#A1A1AA] max-w-[700px] mr-auto font-light leading-[1.8] text-[16px] md:text-[18px]"
+          style={{ fontFamily: "var(--font-bolds-pixels)" }}
+        >
+          A <span className="text-[#FF4A3D]">vibrant collection</span> of moments captured in time, blending the <span className="text-[#FF4A3D]">warmth</span> of a sun-soaked afternoon with the crisp, refreshing reality of modern <span className="text-[#FF4A3D]">digital art</span>. Dive deep into a sea of creative perspectives and <span className="text-[#FF4A3D]">dynamic visual stories</span>.
         </p>
       </motion.div>
       <div
         ref={gallery}
-        className="relative box-border flex h-[150vh] gap-[2vw] overflow-hidden max-w-[1400px] mx-auto px-[2vw] rounded-3xl"
+        className="relative box-border flex h-[150vh] gap-[2vw] overflow-hidden w-full px-[2vw] rounded-3xl"
       >
         <Column images={[images[0], images[1], images[2]]} y={y} />
         <Column images={[images[3], images[4], images[5]]} y={y2} />

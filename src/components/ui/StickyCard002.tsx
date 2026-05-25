@@ -12,7 +12,7 @@ export interface CardData {
   image: string;
   alt?: string;
   title?: string;
-  description?: string;
+  description?: React.ReactNode;
 }
 
 interface StickyCard002Props {
@@ -151,10 +151,16 @@ export const StickyCard002 = ({
                 textRefs.current[i] = el;
               }}
             >
-              <h2 className="text-4xl lg:text-6xl font-bold uppercase tracking-widest font-[family-name:var(--font-heading)] text-[#F5F5F5] drop-shadow-2xl">
+              <h2 
+                className="text-4xl lg:text-6xl font-bold uppercase tracking-normal text-[#F5F5F5] drop-shadow-2xl"
+                style={{ fontFamily: "var(--font-winter-tosca)" }}
+              >
                 {card.title}
               </h2>
-              <p className="text-lg lg:text-xl text-[#A0A0A0] font-[family-name:var(--font-body)] leading-relaxed max-w-xl drop-shadow-xl bg-black/30 lg:bg-transparent p-4 lg:p-0 rounded-xl backdrop-blur-sm lg:backdrop-blur-none">
+              <p 
+                className="text-lg lg:text-xl text-[#A0A0A0] leading-relaxed max-w-xl drop-shadow-xl bg-black/30 lg:bg-transparent p-4 lg:p-0 rounded-xl backdrop-blur-sm lg:backdrop-blur-none"
+                style={{ fontFamily: "var(--font-bolds-pixels)" }}
+              >
                 {card.description}
               </p>
             </div>

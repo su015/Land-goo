@@ -14,8 +14,8 @@
   --color-accent-cyan: #00C2FF;
   --color-border-soft: #1F1F1F;
 
-  --font-heading: var(--font-syncopate), sans-serif;
-  --font-sans: var(--font-inter), sans-serif;
+  --font-heading: var(--font-bolds-pixels), sans-serif;
+  --font-sans: var(--font-winter-tosca), sans-serif;
 }
 
 :root {

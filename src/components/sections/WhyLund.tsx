@@ -38,17 +38,23 @@ export default function WhyLund() {
   return (
     <section className="w-full relative z-10 py-[120px] overflow-hidden border-t border-[var(--color-border-soft)]">
       <motion.div 
-        className="text-center mb-16 px-6 relative z-20 max-w-[1400px] mx-auto w-full"
+        className="text-right mb-16 px-6 md:px-12 lg:px-24 relative z-20 w-full"
         initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h2 className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-[-0.04em] leading-[0.9] text-[#F5F5F5] font-[family-name:var(--font-heading)] mb-6">
-          Why <span className="text-[#00C2FF]">LAnd</span>
+        <h2 
+          className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-normal leading-[0.9] text-[#F5F5F5] mb-6 uppercase"
+          style={{ fontFamily: "var(--font-winter-tosca)" }}
+        >
+          WHY LAND
         </h2>
-        <p className="text-[#A1A1AA] max-w-[700px] mx-auto font-light leading-[1.8] text-[16px] md:text-[18px]">
-          We believe in the perfect synergy of motion, design, and technology. Every interaction is crafted to leave a lasting impression, transforming ordinary web navigation into an immersive journey.
+        <p 
+          className="text-[#A1A1AA] max-w-[700px] ml-auto font-light leading-[1.8] text-[16px] md:text-[18px]"
+          style={{ fontFamily: "var(--font-bolds-pixels)" }}
+        >
+          We believe in the perfect <span className="text-[#FF4A3D]">synergy</span> of motion, design, and <span className="text-[#FF4A3D]">technology</span>. Every interaction is crafted to leave a <span className="text-[#FF4A3D]">lasting impression</span>, transforming ordinary web navigation into an <span className="text-[#FF4A3D]">immersive journey</span>.
         </p>
       </motion.div>
 

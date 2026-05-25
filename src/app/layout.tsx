@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Syncopate, Archivo_Black, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import Navbar from "@/components/ui/Navbar";
@@ -29,6 +30,24 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
+const superHockey = localFont({
+  src: "../../public/fonts/SuperHockey.ttf",
+  variable: "--font-super-hockey",
+  display: "swap",
+});
+
+const boldsPixels = localFont({
+  src: "../../public/fonts/boldspixels.ttf",
+  variable: "--font-bolds-pixels",
+  display: "swap",
+});
+
+const winterTosca = localFont({
+  src: "../../public/fonts/WinterTosca.ttf",
+  variable: "--font-winter-tosca",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "LAnd Studio | Cinematic Digital Experiences",
   description: "A premium, minimalist portfolio showcasing high-end interactive design.",
@@ -42,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${syncopate.variable} ${archivoBlack.variable} ${spaceGrotesk.variable} antialiased bg-[#0A0A0A] text-[#F5F5F5] selection:bg-[#00C2FF] selection:text-[#0A0A0A] min-h-screen relative`}
+        className={`${inter.variable} ${syncopate.variable} ${archivoBlack.variable} ${spaceGrotesk.variable} ${superHockey.variable} ${boldsPixels.variable} ${winterTosca.variable} antialiased bg-[#0A0A0A] text-[#F5F5F5] selection:bg-[#00C2FF] selection:text-[#0A0A0A] min-h-screen relative`}
       >
         {/* Global Cinematic Noise Overlay */}
         <div 

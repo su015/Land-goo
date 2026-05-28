@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,24 +61,25 @@ export default function Navbar() {
         ref={navRef}
         className="fixed top-0 left-0 w-full z-50 py-6 px-8 md:px-16 flex justify-between items-center transition-colors duration-500 glass-panel border-x-0 border-t-0 border-b border-[var(--color-border-soft)]"
       >
-        <div 
+        <Link 
+          href="/"
           className="text-2xl font-bold uppercase tracking-widest text-[#F5F5F5]"
           style={{ fontFamily: "var(--font-super-hockey)" }}
         >
-          LAnd.
-        </div>
+          Delta X.
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-10">
           {links.map((link) => (
-            <a
+            <Link
               key={link}
-              href={link === "Products" ? "/products" : `#${link.toLowerCase()}`}
+              href={link === "Products" ? "/products" : `/#${link.toLowerCase()}`}
               className="text-sm font-medium tracking-wider uppercase text-[#A0A0A0] hover:text-[#F5F5F5] transition-colors duration-300 relative group"
             >
               {link}
               <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-[var(--color-accent-blue)] transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -98,14 +100,14 @@ export default function Navbar() {
       >
         <div className="flex flex-col items-center gap-8">
           {links.map((link) => (
-            <a
+            <Link
               key={link}
-              href={link === "Products" ? "/products" : `#${link.toLowerCase()}`}
+              href={link === "Products" ? "/products" : `/#${link.toLowerCase()}`}
               className="mobile-link text-4xl font-[family-name:var(--font-heading)] uppercase tracking-widest text-[#F5F5F5]"
               onClick={() => setIsOpen(false)}
             >
               {link}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

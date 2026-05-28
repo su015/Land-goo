@@ -14,7 +14,7 @@ export default function Footer() {
             className="text-6xl font-bold text-[#F5F5F5] uppercase tracking-widest"
             style={{ fontFamily: "var(--font-super-hockey)" }}
           >
-            LAnd<span className="text-[var(--color-accent-cyan)]">.</span>
+            Delta X<span className="text-[var(--color-accent-cyan)]">.</span>
           </h2>
           <p className="text-[#A0A0A0] text-lg font-light leading-relaxed max-w-md">
             Crafting premium, cinematic digital experiences. We merge cutting-edge technology with high-end art direction to build immersive environments.
@@ -56,7 +56,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto mt-32 pt-10 border-t border-[var(--color-border-soft)] flex flex-col md:flex-row justify-between items-center gap-6">
         <p className="text-[#6E6E6E] text-sm font-light tracking-wide">
-          © {new Date().getFullYear()} LAnd Studio. All rights reserved.
+          © {new Date().getFullYear()} Delta X Studio. All rights reserved.
         </p>
         <div className="flex gap-10 text-[#6E6E6E] text-sm font-light tracking-wide">
           <Link href="#" className="hover:text-[#A0A0A0] transition-colors">Privacy Policy</Link>

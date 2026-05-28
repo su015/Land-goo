@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React from "react";
 
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const navigationItems = [
   {
@@ -92,13 +93,13 @@ export const Skiper58 = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative flex items-start text-zinc-600 group-hover:text-white transition-colors duration-300">
+              <Link href={item.href} className="relative flex items-start text-zinc-600 group-hover:text-white transition-colors duration-300">
                 <TextRoll
                   className="text-[3.5rem] md:text-[5.5rem] lg:text-[7.5rem] font-extrabold uppercase leading-[0.85] tracking-[-0.02em] whitespace-nowrap"
                 >
                   {item.name}
                 </TextRoll>
-              </div>
+              </Link>
             </li>
           ))}
         </ul>

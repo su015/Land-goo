@@ -48,7 +48,7 @@ export default function WhyLund() {
           className="text-[clamp(3rem,6vw,5rem)] font-bold tracking-normal leading-[0.9] text-[#F5F5F5] mb-6 uppercase"
           style={{ fontFamily: "var(--font-winter-tosca)" }}
         >
-          WHY LAND
+          WHY DELTA X
         </h2>
         <p 
           className="text-[#A1A1AA] max-w-[700px] ml-auto font-light leading-[1.8] text-[16px] md:text-[18px]"

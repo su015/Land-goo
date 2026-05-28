@@ -14,33 +14,27 @@ export default function DockNavigation() {
   if (!isMounted) return null;
 
   const handleScrollTo = (id: string) => {
-    triggerViewTransition(() => {
-      if (pathname !== "/") {
-        router.push(`/#${id}`);
-      } else {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'auto' });
-        }
+    if (pathname !== "/") {
+      router.push(`/#${id}`);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'auto' });
       }
-    }, "circle", "bottom-center", true);
+    }
   };
 
   const handleHomeClick = () => {
-    triggerViewTransition(() => {
-      if (pathname !== "/") {
-        router.push("/");
-      } else {
-        window.scrollTo({ top: 0, behavior: 'auto' });
-      }
-    }, "circle", "bottom-center", true);
+    if (pathname !== "/") {
+      router.push("/");
+    } else {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
   };
 
   const handleRoute = (path: string) => {
     if (pathname === path) return;
-    triggerViewTransition(() => {
-      router.push(path);
-    }, "circle", "bottom-center", true);
+    router.push(path);
   };
 
   const items = [

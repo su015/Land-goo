@@ -58,7 +58,7 @@ export default function About() {
           className="text-5xl md:text-8xl font-bold uppercase tracking-normal text-[#F5F5F5] mb-6 text-center"
           style={{ fontFamily: "var(--font-winter-tosca)" }}
         >
-          ABOUT <span className="text-[var(--color-accent-blue)]">MY LAND</span>
+          ABOUT <span className="text-[var(--color-accent-blue)]">DELTA X</span>
         </h1>
         <p 
           className="text-[#A0A0A0] max-w-2xl text-center font-light leading-relaxed px-6 text-lg md:text-xl"

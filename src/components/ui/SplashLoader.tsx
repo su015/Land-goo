@@ -62,7 +62,7 @@ export default function SplashLoader() {
           animate={{ rotate: !isLoaded ? 360 : 0 }}
           transition={!isLoaded ? { repeat: Infinity, duration: 12, ease: "linear" } : { duration: 1.5, ease: [0.76, 0, 0.24, 1] }}
         >
-          <CircularText text="LAND*STUDIO*PORTFOLIO*" />
+          <CircularText text="DELTA*X*STUDIO*PORTFOLIO*" />
         </motion.div>
       </motion.div>
     </>

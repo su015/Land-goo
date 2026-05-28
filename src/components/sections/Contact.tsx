@@ -42,7 +42,7 @@ export default function Contact() {
             Ready to elevate your digital presence? Reach out to us. We&apos;re currently accepting new projects for Q4.
           </p>
           <div className="flex flex-col gap-4 text-[#F5F5F5] font-mono text-sm tracking-widest uppercase">
-            <a href="mailto:hello@land.studio" className="hover:text-[var(--color-accent-blue)] transition-colors">hello@land.studio</a>
+            <a href="mailto:hello@deltax.studio" className="hover:text-[var(--color-accent-blue)] transition-colors">hello@deltax.studio</a>
             <p>+1 (555) 019-2026</p>
             <p>Los Angeles, CA</p>
           </div>

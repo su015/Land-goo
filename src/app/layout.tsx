@@ -49,7 +49,7 @@ const winterTosca = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LAnd Studio | Cinematic Digital Experiences",
+  title: "Delta X Studio | Cinematic Digital Experiences",
   description: "A premium, minimalist portfolio showcasing high-end interactive design.",
 };
 
